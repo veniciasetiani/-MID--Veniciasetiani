@@ -1,0 +1,15 @@
+struct pat {
+    
+    int patients;
+    int cure; 
+    int date;
+    int month;
+    int year; 
+    char name;
+};
+struct node {
+    pat p;
+    node *left,*right;
+
+    
+};
