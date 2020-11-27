@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include "../controls/control.h"
+int main ()
+{
+    Node *baseroot = NULL;
+    printAll(baseroot);
+    return 0;
+}
