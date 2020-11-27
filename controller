@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+#include "../models/model.h"
+
+Node *createNode(pat p){
+    Node *temp = (node*)malloc(sizeof(node));
+    temp->p.patients=p.patients;
+    temp->p.cure = p.cure;
+    temp->p.date = p.date;
+    temp->p.month = p.month;
+    temp->p.year = p.year;
+    strcpy(temp->p.name = p.name);
+    return temp;
+}
+
+Node *insertNode (node *root , pat p ){
+    if(!root){
+        return createNode(p);
+    }
+    else if(p.cure < root -> p.cure){
+        root->left = insertNode(root->left);
+    }
+    else if(p.cure > root -> p.cure){
+        root->right = insertNode(root->right);
+    }
+}
+
+Node *hitung (pat p){
+    if(cure){
+        printf("All patients get the cure, %d cure left",cure);
+    }
+    else{
+        printf("Need %d more cure",cure);
+    }
+    return createNode;
+}
+
+void printAll (node *root){
+    if(root){
+        printAll(root->left);
+        printf("%d ",root->value);
+        printAll(root->right);
+    }
+}
